@@ -20,9 +20,9 @@ def update(elapsed_time, delta_time):
     
     input_state = GPIO.input(INPUT_PIN)
     if input_state == True:
-	now = datetime.now()
-	dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-	message = "Motion detected - " + dt_string
+        now = datetime.now()
+        dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+        message = "Motion detected - " + dt_string
         print(message)
         logging.info(message)
 
