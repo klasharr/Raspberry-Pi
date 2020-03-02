@@ -53,6 +53,8 @@ EVERY_X_SECS = realtime.Interval(5.0)
 
 ## Usage
 
+This script runs at boot on my Pi Zero and gives three blinks on start up. It can send notifications to your phone, or just log in to your PI via SSH and tail -f the output or log
+
 ```
 python motion.py
 ```
