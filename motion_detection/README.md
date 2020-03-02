@@ -8,4 +8,4 @@ Run with
 python motion.py
 ```
 
-[[https://github.com/username/repository/blob/master/img/octocat.png|alt=octocat]]
+[[https://github.com/klasharr/Raspberry-Pi/blob/master/motion_detection/IMG_20200302_065934654.jpg|alt=motiondetector]]
