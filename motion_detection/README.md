@@ -59,6 +59,6 @@ python motion.py
 
 ## Electronics and power
 
-To come, but power is off a standard phone power bank.
+I'll more details here especially on the PIR set up. 'm powering it from a standard phone power bank. A bit overkill but this is all I have right now.
 
 ![motion detector](https://github.com/klasharr/Raspberry-Pi/blob/master/motion_detection/IMG_20200302_065934654.png)
