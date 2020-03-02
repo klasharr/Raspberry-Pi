@@ -5,4 +5,4 @@
 python motion.py
 ```
 
-[[https://github.com/klasharr/Raspberry-Pi/blob/master/motion_detection/IMG_20200302_065934654.png|alt=motiondetector]]
+![motion detector](https://github.com/klasharr/Raspberry-Pi/blob/master/motion_detection/IMG_20200302_065934654.png)
