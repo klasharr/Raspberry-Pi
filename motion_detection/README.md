@@ -36,14 +36,14 @@ PUSHOVER_SOUND = 'siren'
 PUSHOVER_MESSAGE = 'Movement detected'
 ```
 
-GPIO pin set up, the electroncis are very simple.
+GPIO pin set up, the electronics are very simple.
 
 ```
 PIR_PIN = 18
 LED_PIN = 21
 ```
 
-This controls programme loop cycle. The interval of 1.5 secs helps with over reporting of the PIR sensor which can log movement my times / second.
+This controls programme loop cycle. The interval of 1.5 secs helps with over reporting of the PIR sensor which can log movement many times / second.
 
 ```
 LOOP_INTERVAL_IN_SECS = 1.5
