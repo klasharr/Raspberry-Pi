@@ -58,11 +58,19 @@ EVERY_X_SECS = realtime.Interval(5.0)
 
 ## Usage
 
-I've set this script to run at boot on my Pi Zero and it gives three blinks on start up. It can send notifications to your phone, or just log in to your PI via SSH and tail -f log.
 
 ```
 python motion.py
 ```
+
+It gives three blinks on start up, can send notifications to your phone, or just log in to your PI via SSH and tail -f log. I've set this script to run at boot on my Pi Zero with a crontab entry like this:
+
+```
+@reboot sudo python /home/pi/motion.py >> /home/pi/m.log
+```
+
+Read [more about Raspberry PI and cron](https://www.raspberrypi.org/documentation/linux/usage/cron.md).
+
 
 ## Electronics and power
 
