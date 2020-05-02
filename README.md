@@ -4,12 +4,15 @@
 
 # Ideas
 
-Picture frame
-Clap light control
-Rabbit counter
-Bird webacam
-Plant waterer
-Temp sensor, logger, alarm
-Rabbit cage light
-Pet GPS logger
-Office security system, door switch, cameras
+- Picture frame
+- Clap light control
+- Rabbit counter
+- Bird webacam
+- Plant waterer
+- Temp sensor, logger, alarm
+- Rabbit cage light
+- Pet GPS logger
+- Office security system, door switch, cameras
+- GPIO servo -> LEGO
+- LEGO vehicle
+- Object tracker
