@@ -8,7 +8,7 @@ Experiments
 
 An autonomous sailing boat
 
-https://github.com/klasharr/Raspberry-Pi/projects
+https://github.com/klasharr/Raspberry-Pi/projects/1
 
 
 # Ideas
