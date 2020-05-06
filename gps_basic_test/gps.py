@@ -4,8 +4,12 @@ from datetime import datetime
 import logging
 from rstoys import realtime
 from gpiozero import LED
-import httplib, urllib
 from ratelimit import limits
+
+# ===================== GPX ============================
+
+import gpxpy
+import gpxpy.gpx
 
 # ===================== GPS ============================
 
@@ -43,11 +47,13 @@ red_led = LED(LED_PIN)
 def update(elapsed_time, delta_time):
     
     global gps
-    
+    global logging
+
+    gps.update()    
     if not gps.has_fix:
         print("Waiting for fix...")
-        continue
-    
+        return
+
     print("=" * 40) 
     print(
         "Fix timestamp: {}/{}/{} {:02}:{:02}:{:02}".format(
@@ -59,24 +65,24 @@ def update(elapsed_time, delta_time):
             gps.timestamp_utc.tm_sec,
         )
     )
-    print("Latitude: {0:.6f} degrees".format(gps.latitude))
-    print("Longitude: {0:.6f} degrees".format(gps.longitude))
-    print("Fix quality: {}".format(gps.fix_quality))
+    logging.info("Latitude: {0:.6f} degrees".format(gps.latitude))
+    logging.info("Longitude: {0:.6f} degrees".format(gps.longitude))
+    logging.info("Fix quality: {}".format(gps.fix_quality))
     
     # Some attributes beyond latitude, longitude and timestamp are optional
     # and might not be present.  Check if they're None before trying to use!
-    if gps.satellites is not None:
-        print("# satellites: {}".format(gps.satellites))
-    if gps.altitude_m is not None:
-        print("Altitude: {} meters".format(gps.altitude_m))
+    #if gps.satellites is not None:
+    #    print("# satellites: {}".format(gps.satellites))
+    #if gps.altitude_m is not None:
+    #    print("Altitude: {} meters".format(gps.altitude_m))
     if gps.speed_knots is not None:
-        print("Speed: {} knots".format(gps.speed_knots))
+        logging.info("Speed: {} knots".format(gps.speed_knots))
     if gps.track_angle_deg is not None:
-        print("Track angle: {} degrees".format(gps.track_angle_deg))
-    if gps.horizontal_dilution is not None:
-        print("Horizontal dilution: {}".format(gps.horizontal_dilution))
-    if gps.height_geoid is not None:
-        print("Height geo ID: {} meters".format(gps.height_geoid))
+        logging.info("Track angle: {} degrees".format(gps.track_angle_deg))
+    #if gps.horizontal_dilution is not None:
+    #    print("Horizontal dilution: {}".format(gps.horizontal_dilution))
+    #if gps.height_geoid is not None:
+    #    print("Height geo ID: {} meters".format(gps.height_geoid))
 
         
 # Visual signal our script started        
