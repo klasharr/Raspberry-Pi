@@ -3,6 +3,7 @@
 Experiments
  
 1. [Motion Detector](https://github.com/klasharr/Raspberry-Pi/tree/master/motion_detection)
+2. [GPS Logger](https://github.com/klasharr/Raspberry-Pi/tree/master/gps_basic_test)
 
 # Project
 
