@@ -2,6 +2,15 @@
 
 This script will detect motion, log movement and optionally push a notification to your phone in a rate limited way. 
 
+## 1. Install dependencies
+
+```
+pip install ratelimit
+pip install rstoys
+```
+
+### Notes
+
 I'm using https://pypi.org/project/rstoys/ 
 
 ```
@@ -11,7 +20,20 @@ rstoys.realtime
 to manage the programme loop and https://pushover.net/ as the notification gateway
 
 
-## Config
+## 2. Test the script without adding hardware or adding any config
+
+From the command line:
+
+```
+python motion.py
+```
+
+and you should see this after a few seconds.
+
+<img width="500" alt="Screenshot 2022-06-28 at 12 49 36" src="https://user-images.githubusercontent.com/5604969/176171659-78dc832c-c092-418e-8786-49f9eb0c757b.png">
+
+
+## 3. Config
 
 
 Rate limit the push notifications.
@@ -56,8 +78,9 @@ EVERY_X_SECS = realtime.Interval(5.0)
 ```
 
 
-## Usage
+## 4. Usage
 
+From the command line
 
 ```
 python motion.py
